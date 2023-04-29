@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:petbuddy/app/modules/cadastro/pages/cadastro_ong_page.dart';
-import 'package:petbuddy/app/modules/cadastro/pages/cadastro_pessoa_fisica_page.dart';
 import 'package:petbuddy/app/util/app_colors.dart';
 import 'package:petbuddy/app/util/text_fonts.dart';
-import 'package:petbuddy/app/util/widgets/background_widget.dart';
-
-import '../../util/widgets/button_widget.dart';
-import '../../util/widgets/text_field_widget.dart';
-import '../../util/widgets/text_widget.dart';
+import '../../../util/widgets/button_widget.dart';
+import '../../../util/widgets/text_field_widget.dart';
+import '../../../util/widgets/text_widget.dart';
+import '../widgets/login_background_widget.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -19,23 +17,22 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return BackgroundWidget(
+    return LoginBackgroundWidget(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(
-            height: 75,
-          ),
           const TextWidget(
             text: 'BEM VINDO AO PETBUDDY',
             fontSize: TextFonts.fonteTituloLogin,
+            textColor: AppColors.corPadraoAplicativo,
+            fontWeight: FontWeight.bold,
           ),
           const SizedBox(
             height: 10,
           ),
           const TextWidget(
-            text: 'Usuário',
+            text: 'Adote um amigo para a vida toda aqui',
             fontSize: TextFonts.fonteSubTituloLogin,
           ),
           const SizedBox(
@@ -58,26 +55,39 @@ class _LoginPageState extends State<LoginPage> {
           const SizedBox(
             height: 20,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              TextWidget(text: 'Não tem Cadastro?', fontSize: TextFonts.fonteTextoMedio),
-              TextWidget(text: 'Esqueci a Senha', fontSize: TextFonts.fonteTextoMedio)
-            ],
-          ),
+          const Align(
+              alignment: Alignment.centerRight,
+              child: TextWidget(text: 'Esqueci a Senha', fontSize: TextFonts.fonteTextoMedio)),
           const SizedBox(
             height: 50,
           ),
-          ButtonWidget(
-            buttonText: 'ACESSAR',
-            buttonColor: AppColors.corBotao,
-            onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => const CadastroOngPage(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: ButtonWidget(
+              buttonText: 'ENTRAR',
+              textColor: AppColors.corBranco,
+              buttonColor: AppColors.corPadraoAplicativo,
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const CadastroOngPage(),
+                ),
               ),
             ),
           ),
-          
+          Align(
+            alignment: Alignment.center,
+            child: Row(
+              children: const [
+                TextWidget(text: 'Não tem Cadastro? ', fontSize: TextFonts.fonteTextoMedio),
+                TextWidget(
+                  text: ' Clique aqui',
+                  fontSize: TextFonts.fonteTextoMedio,
+                  fontWeight: FontWeight.w600,
+                  textColor: AppColors.corPadraoAplicativo,
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
