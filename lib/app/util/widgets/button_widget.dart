@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:petbuddy/app/util/app_colors.dart';
+import 'package:petbuddy/app/util/widgets/text_widget.dart';
 
 class ButtonWidget extends StatefulWidget {
   final String buttonText;
@@ -16,9 +17,10 @@ class _ButtonWidgetState extends State<ButtonWidget> {
     return ElevatedButton(
       onPressed: () {},
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color?>(widget.buttonColor ?? AppColors.corBotao),
+        minimumSize: MaterialStateProperty.all<Size?>(Size.fromHeight(50)),
+        backgroundColor: MaterialStateProperty.all<Color?>(widget.buttonColor ?? AppColors.corBotao),        
       ),
-      child: Text(widget.buttonText),
+      child: TextWidget(text: widget.buttonText, textColor: AppColors.corPreto),
     );
   }
 }

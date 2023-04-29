@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:petbuddy/app/modules/home/home_page.dart';
+import 'app/modules/login/login_page.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: HomePage(),
+    home: LoginPage(),
     debugShowCheckedModeBanner: false,
   ));
 }
