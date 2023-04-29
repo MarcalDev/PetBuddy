@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:petbuddy/app/modules/cadastro/cadastro_ong_page.dart';
 import 'package:petbuddy/app/util/app_colors.dart';
 import 'package:petbuddy/app/util/text_fonts.dart';
 import 'package:petbuddy/app/util/widgets/background_widget.dart';
@@ -66,9 +67,14 @@ class _LoginPageState extends State<LoginPage> {
           const SizedBox(
             height: 50,
           ),
-          const ButtonWidget(
+          ButtonWidget(
             buttonText: 'ACESSAR',
             buttonColor: AppColors.corBotao,
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const CadastroOngPage(),
+              ),
+            ),
           ),
         ],
       ),

@@ -11,12 +11,13 @@ class BackgroundWidget extends StatelessWidget {
     return Material(
       child: SafeArea(
         child: Scaffold(
+          resizeToAvoidBottomInset: true,
           body: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),
             child: Container(
               color: AppColors.corBackground,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+                padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
                 child: child,
               ),
             ),
