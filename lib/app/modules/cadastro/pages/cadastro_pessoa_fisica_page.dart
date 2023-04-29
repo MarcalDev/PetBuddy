@@ -6,33 +6,26 @@ import 'package:petbuddy/app/util/widgets/button_widget.dart';
 import 'package:petbuddy/app/util/widgets/text_field_widget.dart';
 import 'package:petbuddy/app/util/widgets/text_widget.dart';
 
-class CadastroOngPage extends StatefulWidget {
-  const CadastroOngPage({super.key});
+import '../widgets/cadastro_background.dart';
+
+class CadastroPessoaFisicaPage extends StatefulWidget {
+  const CadastroPessoaFisicaPage({super.key});
 
   @override
-  State<CadastroOngPage> createState() => _CadastroOngPageState();
+  State<CadastroPessoaFisicaPage> createState() => _CadastroPessoaFisicaPageState();
 }
 
-class _CadastroOngPageState extends State<CadastroOngPage> {
+class _CadastroPessoaFisicaPageState extends State<CadastroPessoaFisicaPage> {
   @override
   Widget build(BuildContext context) {
-    return BackgroundWidget(
+    return CadastroBackgroundWidget(
+        title: 'CADASTRO DE PESSOA FÍSICA',
         child: Padding(
-            padding: EdgeInsets.only(top: 30),
+            padding: const EdgeInsets.only(top: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: TextWidget(
-                    text: 'Cadastro de ONG',
-                    fontSize: TextFonts.fonteTituloPagina,
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
                 Expanded(
                   child: ListView(
                     shrinkWrap: true,
@@ -40,18 +33,9 @@ class _CadastroOngPageState extends State<CadastroOngPage> {
                       const TextFieldWidget(
                         borderColor: AppColors.corPreto,
                         hintText: '',
-                        labelText: 'CNPJ',
-                        suffixIcon: Icon(Icons.search),
+                        labelText: 'Nome',
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      const TextFieldWidget(
-                        borderColor: AppColors.corPreto,
-                        hintText: '',
-                        labelText: 'Nome/Razão Social',
-                      ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -60,7 +44,31 @@ class _CadastroOngPageState extends State<CadastroOngPage> {
                             child: TextFieldWidget(
                               borderColor: AppColors.corPreto,
                               hintText: '',
-                              labelText: 'Telefone',
+                              labelText: 'CPF',
+                            ),
+                          ),
+                          SizedBox(
+                            width: 25,
+                          ),
+                          Expanded(
+                            child: TextFieldWidget(
+                              borderColor: AppColors.corPreto,
+                              hintText: '',
+                              labelText: 'Data Nasc.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: TextFieldWidget(
+                              borderColor: AppColors.corPreto,
+                              hintText: '',
+                              labelText: 'Celular',
                             ),
                           ),
                           SizedBox(
@@ -75,7 +83,7 @@ class _CadastroOngPageState extends State<CadastroOngPage> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -99,7 +107,7 @@ class _CadastroOngPageState extends State<CadastroOngPage> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -122,7 +130,7 @@ class _CadastroOngPageState extends State<CadastroOngPage> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -146,7 +154,7 @@ class _CadastroOngPageState extends State<CadastroOngPage> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       const TextFieldWidget(
@@ -154,10 +162,14 @@ class _CadastroOngPageState extends State<CadastroOngPage> {
                         hintText: '',
                         labelText: 'E-mail',
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
-                      Align(alignment: Alignment.center, child: ButtonWidget(buttonText: 'FINALIZAR', onPressed: () {}))
+                      Align(
+                          alignment: Alignment.center, child: ButtonWidget(buttonText: 'FINALIZAR', onPressed: () {})),
+                      const SizedBox(
+                        height: 50,
+                      ),
                     ],
                   ),
                 ),
