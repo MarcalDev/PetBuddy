@@ -6,6 +6,7 @@ import 'package:petbuddy/app/util/text_fonts.dart';
 import 'package:petbuddy/app/util/widgets/button_widget.dart';
 
 import '../../../util/widgets/text_widget.dart';
+import '../../quero_adotar/pages/quero_adotar_page.dart';
 import '../widgets/perfil_pet_background_widget.dart';
 
 class PerfilPetPage extends StatefulWidget {
@@ -228,7 +229,11 @@ class _PerfilPetPageState extends State<PerfilPetPage> {
             ),
             ButtonWidget(
               buttonText: 'QUERO ADOTAR!',
-              onPressed: () {},
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const QueroAdotarPage(),
+                ),
+              ),
               buttonColor: AppColors.corPadraoAplicativo,
               textColor: AppColors.corBranco,
             ),
