@@ -20,7 +20,14 @@ class LoginBackgroundWidget extends StatelessWidget {
               color: AppColors.corBackground,
               child: Column(
                 children: [
-                  SvgPicture.asset(AssetsAplicativo.ilustracaoLogin, fit: BoxFit.fitHeight),
+                  SvgPicture.asset(
+                    AssetsAplicativo.ilustracaoLogin,
+                    fit: BoxFit.fitWidth,
+                    width: 410,
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
                     child: child,

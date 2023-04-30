@@ -11,6 +11,7 @@ class TextFieldWidget extends StatefulWidget {
   final Color? borderColor;
   final double? width;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
   const TextFieldWidget(
       {super.key,
       required this.hintText,
@@ -19,7 +20,8 @@ class TextFieldWidget extends StatefulWidget {
       this.isPassword = false,
       this.borderColor,
       this.width,
-      this.suffixIcon});
+      this.suffixIcon,
+      this.prefixIcon});
 
   @override
   State<TextFieldWidget> createState() => _TextFieldWidgetState();
@@ -46,15 +48,20 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
         SizedBox(
           width: widget.width,
           child: TextField(
+            textAlignVertical: TextAlignVertical.center,
             keyboardType: widget.keyboardType ?? TextInputType.text,
             obscureText: widget.isPassword,
             decoration: InputDecoration(
               suffixIcon: widget.suffixIcon,
-              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+              prefixIcon: widget.prefixIcon,
+              contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               hintText: widget.hintText,
               fillColor: AppColors.corBranco,
               labelStyle: const TextStyle(color: AppColors.corPreto, backgroundColor: Colors.transparent),
-              hintStyle: const TextStyle(color: AppColors.corPreto, backgroundColor: Colors.transparent),
+              hintStyle: const TextStyle(
+                color: AppColors.corPreto,
+                backgroundColor: Colors.transparent,
+              ),
               isDense: false,
               filled: true,
               enabledBorder: OutlineInputBorder(

@@ -1,5 +1,5 @@
 class TextFonts {
-  static const double fonteTituloPagina = 17;
+  static const double fonteTituloPagina = 1;
   static const double fonteTituloLogin = 17;
   static const double fonteSubTituloLogin = 16;
   static const double fonteBotao = 16;

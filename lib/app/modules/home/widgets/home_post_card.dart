@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:petbuddy/app/util/app_colors.dart';
+import 'package:petbuddy/app/util/assets_aplicativo.dart';
+import 'package:petbuddy/app/util/widgets/text_widget.dart';
+
+class HomePostCard extends StatelessWidget {
+  final String nomeUsuario;
+  final String usernameUsuario;
+  final String descricao;
+  final String imagem;
+  const HomePostCard(
+      {super.key,
+      required this.nomeUsuario,
+      required this.usernameUsuario,
+      required this.descricao,
+      required this.imagem});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      color: Colors.transparent,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SvgPicture.asset(AssetsAplicativo.profileONG),
+              SizedBox(
+                width: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      TextWidget(text: nomeUsuario),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      SvgPicture.asset(AssetsAplicativo.iconCheck),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      TextWidget(text: usernameUsuario),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  SizedBox(width: 270, child: TextWidget(text: descricao, maxLines: 5)),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(width: 270, child: Image.asset(imagem)),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  SizedBox(
+                    width: 270,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: AppColors.corPadraoAplicativo, width: 1.5),
+                              borderRadius: BorderRadius.all(Radius.circular(15))),
+                          padding: EdgeInsets.symmetric(vertical: 2, horizontal: 20),
+                          child: TextWidget(
+                            text: 'Me conheça',
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            SvgPicture.asset(AssetsAplicativo.iconLike),
+                            SizedBox(width: 20),
+                            SvgPicture.asset(AssetsAplicativo.iconMensagem),
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
