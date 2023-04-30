@@ -6,4 +6,5 @@ class TextFonts {
   static const double fonteTextField = 15;
   static const double fonteTextoMedio = 14;
   static const double fonteTextoPequeno = 12;
+  static const double fonteTextoPequenoMenor = 11;
 }

@@ -28,9 +28,9 @@ class _MenuPrincipalPageState extends State<MenuPrincipalPage> {
     return SafeArea(
       child: MaterialApp(
         color: Colors.yellow,
-        home: Scaffold(
+        home: Scaffold(          
           body: listScreens[tabIndex],
-          bottomNavigationBar: BottomNavigationBar(
+          bottomNavigationBar: BottomNavigationBar(            
               selectedItemColor: Colors.white,
               unselectedItemColor: Colors.grey[400],
               backgroundColor: Theme.of(context).primaryColor,

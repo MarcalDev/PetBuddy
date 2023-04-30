@@ -19,7 +19,7 @@ class HomePostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       color: Colors.transparent,
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -33,7 +33,7 @@ class HomePostCard extends StatelessWidget {
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -52,16 +52,16 @@ class HomePostCard extends StatelessWidget {
                   SizedBox(
                     height: 5,
                   ),
-                  SizedBox(width: 270, child: TextWidget(text: descricao, maxLines: 5)),
+                  SizedBox(width: 315, child: TextWidget(text: descricao, maxLines: 5)),
                   SizedBox(
                     height: 10,
                   ),
-                  SizedBox(width: 270, child: Image.asset(imagem)),
+                  SizedBox(width: 315, child: Image.asset(imagem)),
                   SizedBox(
                     height: 15,
                   ),
                   SizedBox(
-                    width: 270,
+                    width: 315,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
