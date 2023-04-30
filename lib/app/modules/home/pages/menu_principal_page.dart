@@ -29,9 +29,7 @@ class _MenuPrincipalPageState extends State<MenuPrincipalPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: MaterialApp(
-        color: Colors.yellow,
-        home: Scaffold(          
+      child: Scaffold(          
           body: listScreens[tabIndex],
           floatingActionButton: Container(
             child: Container(
@@ -71,7 +69,6 @@ class _MenuPrincipalPageState extends State<MenuPrincipalPage> {
                 ),
               ]),
           backgroundColor: Theme.of(context).primaryColor,
-        ),
       ),
     );
   }

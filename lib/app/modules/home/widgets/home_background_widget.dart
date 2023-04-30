@@ -16,8 +16,7 @@ class HomeBackgroundWidget extends StatefulWidget {
 class _HomeBackgroundWidgetState extends State<HomeBackgroundWidget> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
+    return Container(
       color: AppColors.corBackground,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -31,9 +30,16 @@ class _HomeBackgroundWidgetState extends State<HomeBackgroundWidget> {
                   padding: const EdgeInsets.fromLTRB(25, 40, 25, 0),
                   child: Row(
                     children: [
-                      Image.asset(
-                        AssetsAplicativo.fotoUsuario,
-                        height: 55,
+                      Container(
+                        padding: const EdgeInsets.all(1.5),
+                        decoration: BoxDecoration(
+                            color: AppColors.corBranco,
+                            border: Border.all(color: AppColors.corBranco, width: 0),
+                            borderRadius: const BorderRadius.all(Radius.circular(30))),
+                        child: Image.asset(
+                          AssetsAplicativo.fotoUsuario,
+                          height: 50,
+                        ),
                       ),
                       const SizedBox(
                         width: 10,
@@ -49,13 +55,14 @@ class _HomeBackgroundWidgetState extends State<HomeBackgroundWidget> {
                           ),
                           Container(
                             decoration: BoxDecoration(
-                                color: AppColors.corVerdeSelecao,
+                                color: AppColors.corVerdeSelecao.withOpacity(0.7),
                                 border: Border.all(color: AppColors.corVerdeSelecao, width: 0),
                                 borderRadius: const BorderRadius.all(Radius.circular(15))),
                             padding: const EdgeInsets.symmetric(vertical: 0.5, horizontal: 13),
                             child: const TextWidget(
                               text: 'Adotante',
-                              fontWeight: FontWeight.w500,
+                              textColor: AppColors.corVerdeClaro,
+                              fontWeight: FontWeight.w300,
                               fontSize: TextFonts.fonteTextoPequenoMenor,
                             ),
                           ),
@@ -70,6 +77,6 @@ class _HomeBackgroundWidgetState extends State<HomeBackgroundWidget> {
           ]),
         ],
       ),
-    ));
+    );
   }
 }

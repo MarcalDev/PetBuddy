@@ -75,10 +75,10 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             SizedBox(
-              height: 5,
+              height: 25,
             ),
             SizedBox(
-              height: 500,
+              height: 520,
               child: ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
