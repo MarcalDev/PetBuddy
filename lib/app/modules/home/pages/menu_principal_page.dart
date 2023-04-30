@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:petbuddy/app/util/app_colors.dart';
+import 'package:petbuddy/app/util/assets_aplicativo.dart';
+import 'package:petbuddy/app/util/text_fonts.dart';
 
 import 'home_page.dart';
 
@@ -19,7 +23,6 @@ class _MenuPrincipalPageState extends State<MenuPrincipalPage> {
     listScreens = [
       HomePage(),
       HomePage(),
-      HomePage(),
     ];
   }
 
@@ -30,28 +33,41 @@ class _MenuPrincipalPageState extends State<MenuPrincipalPage> {
         color: Colors.yellow,
         home: Scaffold(          
           body: listScreens[tabIndex],
-          bottomNavigationBar: BottomNavigationBar(            
-              selectedItemColor: Colors.white,
-              unselectedItemColor: Colors.grey[400],
-              backgroundColor: Theme.of(context).primaryColor,
+          floatingActionButton: Container(
+            child: Container(
+              height: 60,
+              width: 60,
+              child: FittedBox(
+                child: FloatingActionButton(
+                  backgroundColor: AppColors.corPadraoAplicativo,
+                  child: Icon(Icons.add_rounded, size: 40),
+                  onPressed: () {},
+                ),
+              ),
+            ),
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          bottomNavigationBar: BottomNavigationBar(           
+              selectedItemColor: AppColors.corPadraoAplicativo,
+              unselectedItemColor: AppColors.corTabBarUnselected,
+              backgroundColor: AppColors.corTabBar,
+              selectedFontSize: TextFonts.fonteTextoPequeno,
+              unselectedFontSize: TextFonts.fonteTextoPequeno,
               currentIndex: tabIndex,
               onTap: (int index) {
                 setState(() {
                   tabIndex = index;
                 });
               },
-              items: const [
+              items: [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
-                  label: 'Tab1',
+                  icon: SvgPicture.asset(AssetsAplicativo.iconeHome),
+                  label: 'Quero Adotar',                  
+
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.report_problem),
-                  label: 'Tab2',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.settings),
-                  label: 'Tab3',
+                  icon: SvgPicture.asset(AssetsAplicativo.iconeQueroAjudar),
+                  label: 'Quero Ajudar',
                 ),
               ]),
           backgroundColor: Theme.of(context).primaryColor,

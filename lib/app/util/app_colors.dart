@@ -9,4 +9,6 @@ class AppColors {
   static const corPadraoAplicativo = Color(0xff4A128C);
   static const corVerdeSelecao = Color(0xff25B14A);
   static const corCinza = Color(0xffAFAFAF);
+  static const corTabBar = Color(0xffF2F2F2);
+  static const corTabBarUnselected = Color(0xff888888);
 }
