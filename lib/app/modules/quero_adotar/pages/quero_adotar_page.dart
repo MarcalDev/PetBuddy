@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:petbuddy/app/modules/quero_adotar/pages/selecionar_data_page.dart';
 import 'package:petbuddy/app/modules/quero_adotar/pages/termo_responsabilidade_page.dart';
 import 'package:petbuddy/app/modules/quero_adotar/pages/upload_documentos_page.dart';
 import 'package:petbuddy/app/modules/quero_adotar/widgets/quero_adotar_background_widget.dart';
@@ -20,9 +21,13 @@ class QueroAdotarPage extends StatefulWidget {
 
 class _QueroAdotarPageState extends State<QueroAdotarPage> {
   PageController pageController = PageController();
+  late int indexPage = 0;
 
   avancarPagina() {
-    pageController.jumpToPage(1);
+    if (indexPage < 3) {
+      pageController.jumpToPage(indexPage + 1);
+      indexPage += 1;
+    }
   }
 
   @override
@@ -72,6 +77,7 @@ class _QueroAdotarPageState extends State<QueroAdotarPage> {
               children: const <Widget>[
                 UploadDocumentosPage(),
                 TermoResponsabilidadePage(),
+                SelecionarDataPage()
               ],
             ),
           ),

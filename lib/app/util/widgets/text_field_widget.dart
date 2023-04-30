@@ -12,6 +12,7 @@ class TextFieldWidget extends StatefulWidget {
   final double? width;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
+  final int? maxLines;
   const TextFieldWidget(
       {super.key,
       required this.hintText,
@@ -21,7 +22,8 @@ class TextFieldWidget extends StatefulWidget {
       this.borderColor,
       this.width,
       this.suffixIcon,
-      this.prefixIcon});
+      this.prefixIcon,
+      this.maxLines});
 
   @override
   State<TextFieldWidget> createState() => _TextFieldWidgetState();
@@ -51,6 +53,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
             textAlignVertical: TextAlignVertical.center,
             keyboardType: widget.keyboardType ?? TextInputType.text,
             obscureText: widget.isPassword,
+            maxLines: widget.maxLines,
             decoration: InputDecoration(
               suffixIcon: widget.suffixIcon,
               prefixIcon: widget.prefixIcon,
