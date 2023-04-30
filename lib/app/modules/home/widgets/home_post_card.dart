@@ -19,7 +19,7 @@ class HomePostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.only(bottom: 10),
       color: Colors.transparent,
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -28,7 +28,7 @@ class HomePostCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SvgPicture.asset(AssetsAplicativo.profileONG),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Column(
@@ -39,25 +39,25 @@ class HomePostCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       TextWidget(text: nomeUsuario),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       SvgPicture.asset(AssetsAplicativo.iconCheck),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       TextWidget(text: usernameUsuario),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   SizedBox(width: 315, child: TextWidget(text: descricao, maxLines: 5)),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   SizedBox(width: 315, child: Image.asset(imagem)),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   SizedBox(
@@ -69,17 +69,24 @@ class HomePostCard extends StatelessWidget {
                           decoration: BoxDecoration(
                               border: Border.all(color: AppColors.corPadraoAplicativo, width: 1.5),
                               borderRadius: BorderRadius.all(Radius.circular(15))),
-                          padding: EdgeInsets.symmetric(vertical: 2, horizontal: 20),
-                          child: TextWidget(
+                          padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 20),
+                          child: const TextWidget(
                             text: 'Me conheça',
+                            textColor: AppColors.corPadraoAplicativo,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
                         Row(
                           children: [
-                            SvgPicture.asset(AssetsAplicativo.iconLike),
-                            SizedBox(width: 20),
-                            SvgPicture.asset(AssetsAplicativo.iconMensagem),
+                            SvgPicture.asset(
+                              AssetsAplicativo.iconLike,
+                              height: 22,
+                            ),
+                            const SizedBox(width: 20),
+                            SvgPicture.asset(
+                              AssetsAplicativo.iconMensagem,
+                              height: 22,
+                            ),
                           ],
                         )
                       ],

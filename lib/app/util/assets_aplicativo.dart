@@ -16,4 +16,5 @@ class AssetsAplicativo {
   static const String iconMensagem = "$svgPath/Icon_mensagem.svg";
   static const String fotoUsuario = "$pngPath/Foto_Usuario.png";
   static const String headerLogin = "$svgPath/Header_login.svg";
+  static const String iconeFiltro = "$svgPath/Icon_Filtro.svg";
 }

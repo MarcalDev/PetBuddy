@@ -8,4 +8,5 @@ class AppColors {
   static const corPreto = Color(0xff000000);
   static const corPadraoAplicativo = Color(0xff4A128C);
   static const corVerdeSelecao = Color(0xff25B14A);
+  static const corCinza = Color(0xffAFAFAF);
 }
