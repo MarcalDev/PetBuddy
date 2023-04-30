@@ -4,7 +4,7 @@ import 'app/modules/login/pages/login_page.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: MenuPrincipalPage(),
+    home: LoginPage(),
     debugShowCheckedModeBanner: false,
   ));
 }

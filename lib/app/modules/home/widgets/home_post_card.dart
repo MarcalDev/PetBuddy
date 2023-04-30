@@ -4,6 +4,8 @@ import 'package:petbuddy/app/util/app_colors.dart';
 import 'package:petbuddy/app/util/assets_aplicativo.dart';
 import 'package:petbuddy/app/util/widgets/text_widget.dart';
 
+import '../../perfil_pet/pages/perfil_pet_page.dart';
+
 class HomePostCard extends StatelessWidget {
   final String nomeUsuario;
   final String usernameUsuario;
@@ -65,15 +67,22 @@ class HomePostCard extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(color: AppColors.corPadraoAplicativo, width: 1.5),
-                              borderRadius: BorderRadius.all(Radius.circular(15))),
-                          padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 20),
-                          child: const TextWidget(
-                            text: 'Me conheça',
-                            textColor: AppColors.corPadraoAplicativo,
-                            fontWeight: FontWeight.w500,
+                        InkWell(
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const PerfilPetPage(),
+                            ),
+                          ),
+                          child: Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(color: AppColors.corPadraoAplicativo, width: 1.5),
+                                borderRadius: BorderRadius.all(Radius.circular(15))),
+                            padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 20),
+                            child: const TextWidget(
+                              text: 'Me conheça',
+                              textColor: AppColors.corPadraoAplicativo,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                         Row(
