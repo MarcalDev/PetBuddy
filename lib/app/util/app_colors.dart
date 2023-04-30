@@ -13,4 +13,5 @@ class AppColors {
   static const corCinzaMedio = Color(0xff888888);
   static const corTabBar = Color(0xffF2F2F2);
   static const corTabBarUnselected = Color(0xff888888);
+  static const corAmarelo = Color(0xffF9B113);
 }

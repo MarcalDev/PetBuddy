@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="56.447" viewBox="0 0 55 56.447">
+  <g id="Grupo_153" data-name="Grupo 153" transform="translate(-26.667 -21.333)">
+    <g id="Grupo_152" data-name="Grupo 152" transform="translate(26.667 21.333)">
+      <path id="Caminho_691" data-name="Caminho 691" d="M26.667,114.737V80h55v34.737a5.79,5.79,0,0,1-5.789,5.789H32.456a5.79,5.79,0,0,1-5.789-5.789" transform="translate(-26.667 -64.079)" fill="#f2f2f2"/>
+      <path id="Caminho_692" data-name="Caminho 692" d="M26.667,133.333h55v11.579h-55Z" transform="translate(-26.667 -102.939)" fill="#e2e2e2"/>
+      <path id="Caminho_693" data-name="Caminho 693" d="M69.333,144h5.789v5.789H69.333Zm8.684,0h5.789v5.789H78.017Zm17.368,0h5.789v5.789H95.386Z" transform="translate(-57.754 -110.711)" fill="#b0bec5"/>
+      <path id="Caminho_694" data-name="Caminho 694" d="M69.333,112h5.789v5.789H69.333Zm8.684,0h5.789v5.789H78.017Zm8.684,0h5.789v5.789H86.7Zm8.684,0h5.789v5.789H95.386ZM69.333,129.368h5.789v5.789H69.333Zm8.684,0h5.789v5.789H78.017Zm8.684,0h5.789v5.789H86.7Zm8.684,0h5.789v5.789H95.386Z" transform="translate(-57.754 -87.395)" fill="#90a4ae"/>
+      <g id="Grupo_149" data-name="Grupo 149" transform="translate(0 4.342)">
+        <path id="Caminho_695" data-name="Caminho 695" d="M55.614,66.281H61.4V72.07H55.614ZM81.667,43.123v8.684h-55V43.123a5.79,5.79,0,0,1,5.789-5.789H75.877a5.79,5.79,0,0,1,5.789,5.789" transform="translate(-26.667 -37.333)" fill="#f9bb0d"/>
+      </g>
+      <g id="Grupo_150" data-name="Grupo 150" transform="translate(10.132 5.789)">
+        <path id="Caminho_696" data-name="Caminho 696" d="M98.737,47.009a4.342,4.342,0,1,1-4.342-4.342,4.342,4.342,0,0,1,4.342,4.342m-26.053,0a4.342,4.342,0,1,1-4.342-4.342,4.342,4.342,0,0,1,4.342,4.342" transform="translate(-64 -42.667)" fill="#4a128c"/>
+      </g>
+      <g id="Grupo_151" data-name="Grupo 151" transform="translate(11.579)">
+        <path id="Caminho_697" data-name="Caminho 697" d="M98.281,21.333a2.9,2.9,0,0,0-2.895,2.895v7.237a2.895,2.895,0,1,0,5.789,0V24.228a2.9,2.9,0,0,0-2.895-2.895m-26.053,0a2.9,2.9,0,0,0-2.895,2.895v7.237a2.895,2.895,0,0,0,5.789,0V24.228a2.9,2.9,0,0,0-2.895-2.895" transform="translate(-69.333 -21.333)" fill="#e2e2e2"/>
+      </g>
+    </g>
+  </g>
+</svg>

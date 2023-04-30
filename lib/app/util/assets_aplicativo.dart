@@ -26,4 +26,6 @@ class AssetsAplicativo {
   static const String iconeCasa = "$svgPath/Icone_Casa.svg";
   static const String assinaturaIlustracao = "$svgPath/Assinatura_Ilustracao.svg";
   static const String iconeCalendario = "$svgPath/Icone_Calendario.svg";
+  static const String ilustracaoCalendario = "$svgPath/Ilustracao_Calendario.svg";
+  static const String ilustracaoContrato = "$svgPath/Ilustracao_Contrato.svg";
 }
