@@ -28,4 +28,5 @@ class AssetsAplicativo {
   static const String iconeCalendario = "$svgPath/Icone_Calendario.svg";
   static const String ilustracaoCalendario = "$svgPath/Ilustracao_Calendario.svg";
   static const String ilustracaoContrato = "$svgPath/Ilustracao_Contrato.svg";
+  static const String ilustracaoSucesso = "$svgPath/Ilustracao_Sucesso.svg";
 }

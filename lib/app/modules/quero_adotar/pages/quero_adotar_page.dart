@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:petbuddy/app/modules/quero_adotar/pages/quero_adotar_sucesso_page.dart';
 import 'package:petbuddy/app/modules/quero_adotar/pages/selecionar_data_page.dart';
 import 'package:petbuddy/app/modules/quero_adotar/pages/termo_responsabilidade_page.dart';
 import 'package:petbuddy/app/modules/quero_adotar/pages/upload_documentos_page.dart';
@@ -25,9 +26,13 @@ class _QueroAdotarPageState extends State<QueroAdotarPage> {
   late String imagem = AssetsAplicativo.documentFlat;
 
   avancarPagina() {
-    if (indexPage < 3) {
+    if (indexPage < 2) {
       pageController.jumpToPage(indexPage + 1);      
       indexPage += 1;
+    } else {
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => const QueroAdotarSucessoPage(),
+      ));
     }
 
     setState(() {
